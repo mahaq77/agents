@@ -1,0 +1,35 @@
+/* Design tokens — "wiring console" identity.
+   One accent per connected service; the tri-color thread IS the brand. */
+:root {
+  --bg: #14181f;
+  --surface: #1c222b;
+  --surface-2: #232b36;
+  --line: #303a47;
+  --text: #e8ecf1;
+  --muted: #8b95a5;
+  --figma: #ff7262;
+  --jira: #4c9aff;
+  --github: #a371f7;
+  --ok: #3fb27f;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+button, input, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--jira); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
